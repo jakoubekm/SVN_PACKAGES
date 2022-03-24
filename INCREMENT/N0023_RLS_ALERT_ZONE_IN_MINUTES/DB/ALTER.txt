@@ -1,0 +1,9 @@
+alter table CTRL_SOURCE_PLAN_REF add ALERT_TM_IN_MINUTES INTEGER default '0' not null;
+comment on column "CTRL_SOURCE_PLAN_REF"."ALERT_ZONE_START_TM" is 'Alert zone time for warning message creation, number of hours/minutes (ALERT_TM_IN_MINUTES) from LOAD_DATE/INITIALIZATION_END (RELATED_TO_INITIALIZATION) parameter value';
+comment on column "CTRL_SOURCE_PLAN_REF"."ALERT_ZONE_END_TM" is 'Alert zone time for Sniffer finishing or critical message creation, number of hours/minutes (ALERT_TM_IN_MINUTES) from LOAD_DATE/INITIALIZATION_END (RELATED_TO_INITIALIZATION) parameter value';
+comment on column "CTRL_SOURCE_PLAN_REF"."NOWAIT_ALERT_ZONE_END_TM" is 'Alert zone time for Sniffer finishing in days when delivery is not expected, number of hours/minutes (ALERT_TM_IN_MINUTES) from LOAD_DATE/INITIALIZATION_END (RELATED_TO_INITIALIZATION) parameter value';
+comment on column "CTRL_SOURCE_PLAN_REF"."ALERT_TM_IN_MINUTES" is '0- hours, 1- minutes in *_TM columns';
+
+
+
+

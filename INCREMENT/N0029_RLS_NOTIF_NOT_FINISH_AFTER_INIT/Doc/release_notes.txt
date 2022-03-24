@@ -1,0 +1,12 @@
+N0029_RLS_NOTIF_NOT_FINISH_AFTER_INIT
+- add posibility to send a SMNP trap about job which is not finished in defined interval after initialization.
+
+Installation step:
+1. Execute DB\00_ALTER.sql
+2. Deploy  PCKG_FWRK_body.plb - new version of PCKG_FWRK
+3. Activate checks on jobs:
+	/*job_name*/ -  replace by name of jobs which you would like to check 
+	/*minutes after initialization*/  -  replace by number of minutes after initialization
+
+	insert into CTRL_NOTIFICATION (JOB_NAME,NOTIFICATION_ENABLED,NOTIFICATION_CD,AVG_DURARION_TOLERANCE,AVG_END_TM_TOLERANCE,CHECKED_STATUS,MAX_N_RUN,ERROR_CD,FINISHED_AFTER_INIT_TOLERANCE) 
+	values ('/*job_name*/','1','1',null,null,null,null,'NO_FINISH_INIT','/*minutes after initialization*/');

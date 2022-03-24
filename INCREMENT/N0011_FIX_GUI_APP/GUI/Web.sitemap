@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home-Status" description="Home">
+    <siteMapNode url="~/Monitor.aspx" title="Monitor"  description="Monitor">
+      <siteMapNode url="~/MonStream.aspx" title="Stream View"  description="" />
+      <siteMapNode url="~/MonJobs.aspx" title="Job View"  description="" />
+      <siteMapNode url="~/MonJobsRunning.aspx" title="Running Jobs"  description="Monitor Running Jobs only." />
+      <siteMapNode url="~/MonJobsFailed.aspx" title="Failed Jobs"  description="Monitor Failed Jobs only." />      
+      <siteMapNode url="~/MonJobsReady.aspx" title="Ready to Run Jobs"  description="Monitor Ready to Run Jobs only." />
+      <siteMapNode url="~/MonJobsFinished.aspx" title="Finished Jobs"  description="Monitor Finished Jobs only." />
+      <siteMapNode url="~/MonJobsAll.aspx" title="All Jobs"  description="Monitor all jobs." />
+      <siteMapNode url="~/MonJobsOdd.aspx" title="Odd Jobs"  description="Monitor all Odd jobs." />
+    </siteMapNode>
+    <siteMapNode url="~/Control.aspx" title="Control"  description="">
+      <siteMapNode url="~/ControlScheduler.aspx" title="Scheduler"  description="Start / Stop Scheduler." />
+      <siteMapNode url="~/ControlFinish.aspx" title="Finish (skip) Jobs"  description="Finish (skip) jobs." />
+      <siteMapNode url="~/ControlFinishFailed.aspx" title="Finish failed Jobs"  description="Finish failed jobs." />
+      <siteMapNode url="~/ControlRestart.aspx" title="Restart Jobs"  description="Restart failed jobs." />
+      <siteMapNode url="~/ControlRestartFinished.aspx" title="Restart Finished Jobs"  description="Restart finished jobs." />      
+      <siteMapNode url="~/ControlBlock.aspx" title="Block Jobs"  description="Block running jobs." />
+      <siteMapNode url="~/ControlUnblock.aspx" title="Unblock Jobs"  description="Unblock blocked jobs." />
+      <siteMapNode url="~/ControlManual.aspx" title="Manual Batch"  description="Manual Batch functionality enables recalculation of selected Jobs for chosen load date." />
+    </siteMapNode>
+    <siteMapNode url="~/Logs.aspx" title="Logs"  description="">
+      <siteMapNode url="~/LogsGUI_LOG_CTRL_ACTION.aspx" title="GUI_LOG_CTRL_ACTION"  description="All control action in PDC application is logged in GUI_LOG_CONTROL_ACTION table for documentation reason." />
+      <siteMapNode url="~/LogsSTAT_LOG_MESSAGE_HIST.aspx" title="STAT_LOG_MESSAGE_HIST"  description="There are all alert messages created by Framework checker stored in STAT_LOG_MESSAGE_HIST table." />
+      <siteMapNode url="~/LogsSTAT_LOG_EVENT_HIST.aspx" title="STAT_LOG_EVENT_HIST"  description="There are all events stored in STAT_LOG_MESSAGE_HIST table. Events are used for message generation when condition is met." />
+    </siteMapNode>
+    <siteMapNode url="~/SessTables.aspx" title="SESS Tables"  description="">
+    </siteMapNode>
+    <siteMapNode url="~/CtrlTables.aspx" title="CTRL Tables"  description="">
+      <siteMapNode url="~/CTRL_STREAM.aspx" title="Stream"  description="CTRL_STREAM" />
+      <siteMapNode url="~/CTRL_JOB.aspx" title="Job"  description="CTRL_JOB" />
+      <siteMapNode url="~/CTRL_STREAM_DEPENDENCY.aspx" title="Stream Dependecy"  description="CTRL_STREAM_DEPENDENCY" />
+      <siteMapNode url="~/CTRL_JOB_DEPENDENCY.aspx" title="Job Dependency"  description="CTRL_JOB_DEPENDENCY" />
+      <siteMapNode url="~/CTRL_STREAM_PLAN_REF.aspx" title="Stream Plan Ref"  description="CTRL_STREAM_PLAN_REF" />
+      <siteMapNode url="~/CTRL_JOB_TABLE_REF.aspx" title="Job Table Ref"  description="CTRL_JOB_TABLE_REF" />
+    </siteMapNode>
+    <siteMapNode url="~/Admin.aspx" title="Admin"  description="">
+      <siteMapNode url="~/AdminLabel.aspx" title="Label Maintenance"  description="Set a Label or Manage existing labels." />
+      <siteMapNode url="~/AdminChangeMangement.aspx" title="Change Management"  description="Generate packcage to current Label." />
+      <siteMapNode url="~/AdminAccessControl.aspx" title="Access Control"  description="Allows to manage access control of User roles to particular Content." />
+      <siteMapNode url="~/AdminUserMngmt.aspx" title="User Management"  description="Add or Modify users in PDC." />
+    </siteMapNode>
+    <siteMapNode url="~/Reports.aspx" title="Reports"  description="">
+    </siteMapNode>
+    <siteMapNode url="~/AdminUserPasswdChng.aspx" title="Change Password"  description="">
+    </siteMapNode>
+    
+  </siteMapNode>
+</siteMap>

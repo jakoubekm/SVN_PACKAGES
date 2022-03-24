@@ -1,0 +1,5 @@
+N0032_FIX_ENG_PID_HANDLING
+Fix:  stored PID can be recycled by system for another process that can be killed by during start of Engine.pl.
+
+Installation step:
+1. Copy content of Bin\Framework into <PDC_INSTALL>\Bin\Framework folder.

@@ -1,0 +1,19 @@
+N0033_RLS_ENG_FAILED_RUNNINGPL_HANDLING
+Release:
+1. PID of running Run-job.pl is now stored in SESS_QUEUE.RUNNING_JOB_PID.
+2. New routine which checks if exists running Run_job.pl process for PDC running job with following parameters.
+
+	$RUNNINGPL_JOB_CHECKS = 0;  # 0-false, 1-true
+	$RUNNINGPL_JOB_CHECKS_GJL_CYCLES = 10; #check is done after num. of GET_JOB_LIST cycles
+	$RUNNINGPL_JOB_CHECKS_JOBS_DURATION = 300; #job is check only if it's runnning more than specified duration [s]
+
+Prerequisite:
+(WIN server) instal Perl module Win32::Process::List.
+ppm install Win32-Process-List
+
+	
+	Installation step:
+1. Deploy DB/00_ALTER.sql script.
+2. Deploy  DB/PCKG_ENGINE.plb - new version of PCKG_ENGINE header.
+3. Deploy  DB/PCKG_ENGINE_body.plb - new version of PCKG_ENGINE body.
+4. Copy content of Bin\Framework into <PDC_INSTALL>\Bin\Framework folder.

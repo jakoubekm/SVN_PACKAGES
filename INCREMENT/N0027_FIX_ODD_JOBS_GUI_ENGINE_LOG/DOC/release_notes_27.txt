@@ -1,0 +1,7 @@
+Změny:
+1.  změna FP 41 - Engine log - nazev rozsiren o datum a cas
+2.  změna FP 34 - Oprava zobrazeni detailu ODD jobu - exp_avg_finish
+
+Instalace:
+1.  Nasazení změněných balíčků v DB.
+2.  Nasazení změněného engine.pl.

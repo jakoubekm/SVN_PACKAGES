@@ -1,0 +1,9 @@
+Změny:
+1.  změna FP 36 - Umožnit sdílení task_type a sub_type  přes systémy - nutné pro optimalizaci např zátěže DB.
+2.  změna FP 23 - Zablokování systému v rámci GUI
+
+Instalace:
+1.  Nasazení změněných balíčků v DB.
+1.  Záloha GUI.
+2.  Přepsání změněných souborů v podsložce GUI.
+

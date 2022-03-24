@@ -1,0 +1,4 @@
+VF - package 11 (s aplikaci N0018_FIX_GUI_SELECTED_VALUES - pokracovani opravy N0005_FIX_CONNECTIONS max Open_Cursors)
+O2 - package 32, (hotfix package 36 nasazen, package 33 poslan k nasazeni)
+MSD - package 37 (nasazena cast 38 tykajici se cisteni SESS_STATUS)
+demo - package 31

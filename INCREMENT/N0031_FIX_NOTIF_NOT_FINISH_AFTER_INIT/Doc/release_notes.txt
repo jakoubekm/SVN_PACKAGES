@@ -1,0 +1,6 @@
+N0031_FIX_NOTIF_NOT_FINISH_AFTER_INIT
+Fix: Period is calculated from the beginning of initialization instead of the end of initialization.
+"N0029_RLS_NOTIF_NOT_FINISH_AFTER_INIT- add posibility to send a SMNP trap about job which is not finished in defined interval after initialization."
+
+Installation step:
+1. Deploy  PCKG_FWRK_body.plb - new version of PCKG_FWRK

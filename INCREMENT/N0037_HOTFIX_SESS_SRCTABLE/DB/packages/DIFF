@@ -1,0 +1,29 @@
+--- C:/temp/PCKG_INIT_body-57.sql	st II 25 14:18:48 2015
++++ C:/temp/PCKG_INIT_body.sql	èt VI  8 04:06:14 2017
+@@ -1,5 +1,5 @@
+ 
+-  CREATE OR REPLACE PACKAGE BODY "PDC"."PCKG_INIT"
++  CREATE OR REPLACE PACKAGE BODY "PCKG_INIT"
+ AS
+     PROCEDURE SP_INIT_INITIALIZE(ENGINE_ID_IN IN NUMBER DEFAULT 0
+                                , DEBUG_IN IN   INTEGER:= 0
+@@ -638,6 +638,9 @@
+             RAISE EX_PROCEDURE_END;
+         END IF;
+ 
++        /* Hotfix: Only done for engine 0  */
++        IF ENGINE_ID_IN = 0 THEN
++
+         V_STEP := 'Calling procedure SP_INIT_SRCTABLE';
+         V_DBG_INFO_ID := V_DBG_INFO_ID + 1;
+         V_ALL_DBG_INFO(V_DBG_INFO_ID) := ' STEP> ' || V_STEP;
+@@ -669,6 +672,9 @@
+             RAISE EX_PROCEDURE_END;
+         END IF;
+ 
++        END IF;
++        /* END Hotfix: Only done for engine 0  */
++
+         V_STEP := 'Inserting all records from SESS_JOB_DEPENDENCY_BCKP into SESS_JOB_DEPENDENCY';
+         V_DBG_INFO_ID := V_DBG_INFO_ID + 1;
+         V_ALL_DBG_INFO(V_DBG_INFO_ID) := ' STEP> ' || V_STEP;

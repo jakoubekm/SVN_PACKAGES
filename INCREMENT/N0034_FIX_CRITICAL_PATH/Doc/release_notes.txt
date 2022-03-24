@@ -1,0 +1,5 @@
+N0034_FIX_CRITICAL_PATH
+Fix: Issue in limit state.
+
+Installation step:
+1. Deploy PCKG_CRTP_body.sql

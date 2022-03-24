@@ -1,0 +1,5 @@
+N0036_FIX_EMPTY_BAT_FILE
+Fix: ensure that exec. File is not empty
+
+Installation step:
+1. Copy content of Bin\Framework into <PDC_INSTALL>\Bin\Framework folder.

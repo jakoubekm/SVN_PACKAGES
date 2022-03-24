@@ -1,0 +1,3 @@
+N0028_HOTFIX_RUN_JOB 
+- oprava handling vypadku pripojeni do DB
+- pridani logu ze spousteni .bat s exekucnim kodem.

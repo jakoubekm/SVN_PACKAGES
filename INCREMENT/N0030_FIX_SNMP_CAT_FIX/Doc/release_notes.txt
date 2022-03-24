@@ -1,0 +1,6 @@
+N0030_FIX_SNMP_CAT_FIX
+- oprava kategorizace v ramci OID, pridan MIB definice - nutne provest zmeny na SNMP smerovaci
+
+Postup nasazeni:
+- Nahrazeni Framework_checker.pl + kopi sched.mib v Bin/Framework 
+- Uprava na smerovaci/prijemci SNMP smerovaci, prijemci

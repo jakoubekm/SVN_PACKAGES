@@ -1,0 +1,5 @@
+N0039_HOTFIX_DELAY_AFTER_SUCC_ORA_CONN
+HotFix: remove delay 5 sec if connection to Oracle was successfully established. It should be applied only when connection was not established. Related to N0028_HOTFIX_RUN_JOB.
+
+Installation step:
+1. Copy content of Bin\Framework into <PDC_INSTALL>\Bin\Framework folder.

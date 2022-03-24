@@ -1,0 +1,1555 @@
+/*!! Please note that in Sitemaster.apsx background color of tables headers is changed to value from CTRL_PARAMETERS!!*/
+/* CSS Document */
+#layout-inner-side-decoration {
+width: 1200px;
+}
+#layout-box {
+clear: both;
+ 	width: 1195px;
+}
+
+/* begin css cached */
+
+/*******************************************************************************
+ * PDC Portlets sizes
+ ******************************************************************************/
+
+/*.portlet-box      { width: 600px } */ /* filter */
+
+.portlet-box-info { width: 120px; }
+
+/*.layout-maximized .portlet-box, */
+
+.PortletBoxInnerHalf {width: 45%; float: left; }
+.PortletBoxInnerHalfR {width: 45%; float: left; padding-left: 10px;}
+
+.portlet-header-bar-filter {width: 1195px;}
+
+.CenterPageContainer {width: 962px;}
+.CenterPageContainerMaximized {width: 1120px; float: left;}
+
+
+#p_UnauthorizedAccess { text-align: center; vertical-align: middle; padding-top: 50px;}
+
+.RightMenuContainer {
+width: 190px;
+
+}
+.RightMenuContainerHidden {
+width: 12px;
+height: 200px;
+float: left;
+margin-right: 10px;
+}
+
+
+.floatingPanel{
+float: left;
+width: 8%;
+border: 1px solid red;
+margin-left: 5px;
+}
+
+/*******************************************************************************
+ * PDC Basic Set
+ ******************************************************************************/
+.PDCDropDownEngine {
+  width: 40px;
+  background-color: white;
+  margin: 0px; 
+  padding: 0px;
+  margin-top: 3px;
+  margin-right: 100px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.PDCPortalInfo {
+background-image: url(../../../html/themes/teradata/images/PDC/Status-dialog-information-icon.png);
+background-repeat: no-repeat;
+background-position: left top;
+padding-left: 20px;
+color: white;
+height: 24px;
+}
+
+
+/*******************************************************************************
+ * PDC Basic Set
+ ******************************************************************************/
+html {scrollbar-face-color: #dae1e8;
+scrollbar-shadow-color: #466b8b;
+scrollbar-highlight-color: #466b8b;
+scrollbar-3dlight-color: #dae1e8;
+scrollbar-darkshadow-color: #999999;
+scrollbar-track-color: #c5c5c5;
+scrollbar-arrow-color: #3f3f3f;} 
+
+.B1 {color: #dae1e8} 
+.B2 {color: #466b8b}
+.B3 {color: #2e5273}
+.B4 {color: #293f52}
+.B5 {color: #182530}
+.G1 {color: #f2f2f2}
+.G2 {color: #c5c5c5}
+.G3 {color: #999999}
+.G4 {color: #6c6c6c}
+.G5 {color: #3f3f3f}
+.T1 {color: #e49579}
+.T2 {color: #d25c31}
+.T3 {color: #d63900}
+.T4 {color: #b32400}
+.T5 {color: #8f0000}
+.TDO {color: #fb8b2d}
+.TDGreen {color: #04B13C}
+
+.portletEngineSelection {height: 28px;}
+.refreshButton {color: #293f52; }
+
+.tableEvenRow { background-color: #A2B4C5; color: #000000; }
+
+.BackB1 {background-color: #dae1e8}
+
+.infoLabel { color: #b32400; }
+A.infoLabel { color: #182530; }
+
+.ModuleHeader, .ModuleHeaderStamp, .TextDataLabel, .SparklineDataLabel, .Data, .ActiveNavLinks {
+font-family: Verdana;
+}
+
+
+.ModuleHeader, .ModuleHeaderStamp, .TextDataLabel, .SparklineDataLabel, .Data {
+text-transform: uppercase;
+}
+
+.ModuleHeader {
+font-size: 11px;
+font-weight: bold;
+color: #3f3f3f
+}
+.ModuleHeaderStamp {
+font-size:  10px;
+color: #999999
+}
+.TextDataLabel {
+font-size:   9px;
+color: #999999
+}
+.SparklineDataLabel {
+font-size: 9px;
+color: #3f3f3f
+}
+.Data {
+font-size: 11px;
+color: #3f3f3f
+}
+.ActiveNavLinks {
+font-size: 10px;
+color: #466b8b
+}
+.CenterPageContainer {
+float: left;
+
+}
+.RightMenuContainer {
+float: left;
+margin-right: 10px;
+}
+.RightMenu {
+margin-top: 4px;
+margin-bottom: 10px;
+}
+.RightMenu ul{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+.RightMenu ul li {margin-top: 10px;}
+.RightMenu ul li ul li {margin-top: 0px;}
+.RightMenu ul li ul {margin-top: 4px;}
+
+.RightMenu ul li a{
+  border-left: 4px solid #f2f2f2; 
+  padding-left: 4px; 
+  text-transform: uppercase; 
+  font-family: Verdana;
+  font-size:  10px;
+  color: #3f3f3f;
+  border-bottom: 4px solid #f2f2f2;
+  margin-bottom: 2px;
+}
+.RightMenu ul li a:hover {
+  border-left: 4px solid #fb8b2d; text-decoration: none; color: #182530; border-bottom: 4px solid #fb8b2d;
+}
+.RightMenu ul li .slc {
+  border-left: 4px solid #466b8b; text-decoration: none; color: #182530; border-bottom: 4px solid #466b8b;
+}
+.RightMenu ul li ul li a{
+  border-left: 14px solid #f2f2f2; 
+  padding-left: 4px;
+  text-transform: none;
+  font-size:  10px;
+  color: #999999;
+  border-bottom: 0px solid #f2f2f2;
+  margin-bottom: 0px;
+}
+
+.RightMenu ul li ul li a:hover {
+  border-left: 14px solid #fb8b2d; text-decoration: none; color: #182530; border-bottom: 0px solid #fb8b2d;
+}
+.RightMenu ul li ul li .slc {
+  border-left: 14px solid #466b8b; text-decoration: none; color: #182530; border-bottom: 0px solid #466b8b;
+}
+
+.portletMainfInfo {
+margin-left: 1px;
+margin-top: 4px;
+padding-left: 8px;
+padding-right: 7px;
+padding-bottom: 6px;
+padding-top: 4px;
+}
+
+
+.PortletBoxInner {
+background-color: #e2e8ed;
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-top-bg-middle_small.gif);
+background-repeat: repeat-x;
+border-bottom: 1px dotted #6c6c6c;
+
+
+clear: both;
+
+}
+
+.PortletBoxInner DIV.scrollable DIV {
+overflow-y: visible;
+overflow-x: scroll;
+}
+
+
+.PortletBoxInnerFilter { 
+
+}
+
+
+.PanelFiltered { 
+border-bottom: 2px solid red; 
+border-left: 2px solid red;
+background-image: url(../../../html/themes/teradata/images/PDC/filter-icon-inactive.png);
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+.PortletBoxInner, .PortletBoxInnerFilter {
+margin-bottom: 10px;
+padding-left: 10px; padding-right: 10px;
+padding-top: 4px; padding-bottom: 6px;
+}
+
+.PortletBoxInnerInfo {
+margin-bottom: 10px;
+padding-top: 0px; padding-bottom: 0px;
+}
+.PortletBoxInnerInfo p{
+padding-left: 4px; padding-right: 4px;
+}
+.PDCFilterButtons{ 
+  margin-bottom: 10px;
+  padding-top: 6px;
+  clear:both;
+  width: 40%;
+   
+}
+
+p {
+  margin: 0px; padding-top: 6px; padding-bottom: 6px;
+  clear: both;
+}
+
+/*******************************************************************************
+ * PDC Calendar
+ ******************************************************************************/
+
+
+
+/*******************************************************************************
+ * Top Menu - Submenu
+ ******************************************************************************/
+UL.PDCTopSubmenu {
+display: none;
+position: absolute;
+margin-top: 6px;
+width: 700px;
+}
+
+#layout-tab-selected UL {
+display: block;
+
+}
+
+.False {display: none;}
+
+UL.PDCTopSubmenu LI {
+float: left;
+padding-left: 10px;
+
+}
+
+#layout-tab-selected UL.PDCTopSubmenu LI A {
+color: #182530;
+}
+#layout-tab-selected UL.PDCTopSubmenu LI A:hover {
+color: #2e5273;
+text-decoration: underline;
+}
+
+.PDCSectionLevelMenu {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetabregion-bg.gif);
+background-position: top left;
+background-repeat: repeat-x;
+background-color: #466b8b;
+}
+
+/*******************************************************************************
+ * Login
+ ******************************************************************************/ 
+
+#layout-content-inner-decoration {background-color: #fcfafc;}  
+.tdpagetoplogin {
+    clear: both;
+    background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-login-bg-middle.gif );
+    background-position: top left;
+    background-repeat: repeat-x;
+    height: 35px;
+}
+.tdpagetoplogin-left {
+    background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-login-bg-left.gif );
+    background-position: top left;
+    background-repeat: no-repeat;
+    height: 35px;
+}
+.tdpagetoplogin-right {
+    background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-login-bg-right.gif );
+    background-position: top right;
+    background-repeat: no-repeat;
+    height: 35px;
+}
+
+.login {
+    font-family: Verdana, Arial;
+    font-size: 11px;
+    font-weight: normal;
+    color: #6b6b6b;
+    padding: 10px;
+    position: relative;
+    top: 33px;
+    left: 350px;
+ width: 247px;
+}
+.login li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.login .desc {
+    font-size: 25px;
+    font-weight: bold;
+    color: #6b6b6b;
+    padding-bottom: 14px;
+}
+.login input {
+    width: 220px;
+    margin-top: 5px;
+    border-color: #a2b5c6;
+}
+
+.login .submit-button {
+    text-align: right;
+    margin-right: 2px;
+    margin-top: 6px;
+}
+
+.login .submit-button input {
+    width: 80px;
+    margin-top: 5px;
+    border-color: #a2b5c6;
+}
+.login .login-error {
+    color: #b32400;
+}
+
+.form-text {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.tdpagebottomlogin {
+    clear: both;
+    background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-login-bottom-bg-middle.gif );
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    height: 97px;
+}
+.tdpagebottomlogin-left {
+    background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-login-bottom-bg-left.gif );
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    height: 97px;
+}
+.tdpagebottomlogin-right {
+    background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-login-bottom-bg-right.gif );
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: 97px;
+}
+
+/*******************************************************************************
+ * Filtering
+ ******************************************************************************/
+ 
+A.aspNetDisabled {
+text-decoration: none;
+}
+A.aspNetDisabled:hover {
+text-decoration: none;
+}
+#LBFilteringTurnOff {
+display: block;
+height: 16px;
+
+}
+.filterOn, .filterOff {
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 24px;
+padding-top: 2px;
+color: #ffffff;
+display: inline-table;
+float: left;
+height: 16px;
+}
+.filterOn {
+background-image: url(../../../html/themes/teradata/images/PDC/Green.png);
+}
+.filterOff {
+/*background-image: url(../../../html/themes/teradata/images/PDC/Gray.png);*/
+background-image: url(../../../html/themes/teradata/images/PDC/Red.png);
+}
+
+
+.PDCMainFilter {
+/*display: none;*/
+width: 100%;
+}
+/*******************************************************************************
+ * Engine & Scheduler Status
+ ******************************************************************************/
+.PDCSchStatus, .PDCEngStatus, .PDCSysStatus {
+padding: 0px ;
+border: 0px solid green;
+width: 200px;
+}
+
+.ON, .OFF, .ONOFF {
+padding-left: 9px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 6px;
+background-repeat: no-repeat; 
+background-position: left top;
+}
+.ON     {background-image: url(../../../html/themes/teradata/images/PDC/Green.png); color: black;}
+.OFF    {background-image: url(../../../html/themes/teradata/images/PDC/Red.png); color: silver;}
+.ONOFF  {background-image: url(../../../html/themes/teradata/images/PDC/Gray.png); color: black;}
+
+.headerButton { 
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/sort_desc.gif); 
+background-position: right;
+background-repeat: no-repeat;
+border: 0px none;
+padding-right: 16px;
+color: white;
+}
+
+.revealed{ 
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/sort_asc.gif); 
+}
+
+/*******************************************************************************
+ * Portlet Section Menu
+ ******************************************************************************/ 
+ul.portletSectionMenu { background-color: white; padding: 10px; margin: 0px;}
+ul.portletSectionMenu li { list-style: none url(); }
+ul.portletSectionMenu li a { color: #b32400; }
+
+/*******************************************************************************
+ * Table cascade - TBL Universal table
+ ******************************************************************************/ 
+table.PDCTbl {
+background-color: #293f52;
+color: #dae1e8;
+width: 100%
+}
+
+table.PDCTbl tr td  { white-space: nowrap;}
+
+
+
+.Modified { border: 2px solid lightgreen;}
+
+
+.PDCTblRow      {background-color: #ffffff; color: #3f3f3f;}
+.PDCTblSelRow   {background-color: #f2f2f2; color: #3f3f3f; font-weight: bold;}
+.PDCTblEvenRow  {background-color: #ffffff; color: #3f3f3f; }
+.PDCTblHeader   {background-color: #2e5273; color: #ffffff; }
+.PDCTblFooter   {background-color: #2e5273; color: #ffffff;}
+/* paging */
+.PDCTblPaging   {background-color: #dae1e8; color: black;}
+table.PDCTbl tr.PDCTblPaging table SPAN {color: gray;}
+table.PDCTbl tr.PDCTblPaging table A {color: black; text-decoration: underline;}
+
+
+
+.PDCTblRow A, .PDCTblEvenRow A {color: #3f3f3f;}
+
+.PDCTblSelRow A {}
+.PDCTblHeader A {color: #f2f2f2;}
+
+.PDCTbl img {height: 12px;}
+
+table.PDCTbl input {
+border: 1px solid green ;
+width: 100%;
+height: 12px;
+margin: 0px;
+padding: 0px;
+font-style: italic;
+font-size: 0.9em;
+background-color: #f2f2f2;
+}
+
+table.PDCTbl td.PDCHighlight{
+background-color: #f2f2f2;
+font-weight: bold;
+}
+
+table.PDCTbl .detailLink { 
+width: 16px; 
+background-image: url(../../../html/themes/teradata/images/PDC/Actions-go-next-view-icon.png); 
+background-repeat: no-repeat;
+border: 0px solid red;
+height: 14px;
+margin: 0px;
+padding: 0px;
+cursor: pointer;
+}
+
+table.PDCTbl .detailLinkEdit { 
+width: 16px; 
+background-image: url(../../../html/themes/teradata/images/PDC/Actions-document-edit-icon.png); 
+background-repeat: no-repeat;
+border: 0px solid red;
+height: 14px;
+margin: 0px;
+padding: 0px;
+cursor: pointer;
+}
+
+
+span.gridCheckBox {
+display: block;
+width: 20px; 
+margin: 0px;
+padding: 0px;
+background-color: transparent;
+}
+
+
+table.PDCTbl .gridCheckBox input {
+border: none;
+background-color: transparent;
+height: 14px;
+margin: 0px;
+padding: 0px;
+
+}
+
+/*******************************************************************************
+ * Table cascade
+ ******************************************************************************/ 
+table.PDCStatTable {
+background-color: #293f52;
+color: #dae1e8;
+width: 100%;
+text-align: center;
+}
+table.PDCStatTable A{
+color: #182530;
+}
+table.PDCStatTable input 
+{
+padding: 0px;
+margin: 0px;    
+   
+}
+table.PDCStatTable th{
+background-color: #2e5273;
+}
+
+.sort_desc, .sort_asc{
+background-position: right;
+background-repeat: no-repeat;
+padding-right: 16px;
+background-color: #b32400;
+}
+
+.sort_desc{
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/sort_desc.gif);
+}
+.sort_asc{
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/sort_asc.gif);
+}
+
+table.PDCStatTable td{
+background-color: #ffffff;
+color: #6c6c6c;
+}
+
+
+
+
+
+/*******************************************************************************
+ * Table cascade - filtering
+ ******************************************************************************/ 
+
+table.PDCStatTableFilter {
+background-color: #293f52;
+color: #dae1e8;
+width: 60%;
+text-align: left;
+}
+table.PDCStatTableFilter thead{
+background-color: #2e5273;
+}
+table.PDCStatTableFilter td.PDCStatTableFilter{
+background-color: #466b8b;
+color: #f2f2f2;
+width: 35%;
+
+}
+table.PDCStatTableFilter td.PDCStatTableFilterValue {
+background-color: #ffffff;
+color: #6c6c6c;
+width: 50%;
+}
+
+table.PDCStatTableFilter input { 
+  width: 90%;
+  background-color: #ffffff;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  color: #b32400;
+  font-weight:bold;
+
+}
+
+table.PDCStatTableFilter input:focus { 
+  background-color: #ffffff;
+  border-color: #d25c31;
+  border-width: 1px;
+  border-style: dashed; 
+   color: green;
+}
+
+ 
+
+/*******************************************************************************
+ * Table cascade - END
+ ******************************************************************************/ 
+
+
+/*******************************************************************************
+ * Section menu
+ ******************************************************************************/
+.SectionMenu { 
+background-color: #dae1e8;
+border: 1px dashed silver; 
+clear:both;
+padding: 2px;
+margin: 1px;
+vertical-align: middle;
+}
+
+.SectionMenu span, .SectionMenu A { padding-top:2px; padding-bottom: 2px;  margin:2px; display: block;}
+
+.SectionMenu A {color: #182530; font-weight: bold;  width: 160px; background-color: #dae1e8; float: left; clear:both;}
+.SectionMenu A:hover {color: #f2f2f2; font-weight: bold; background-color: #466b8b; text-decoration: none;}
+
+
+ 
+  
+#portal-nav-container {
+float: left;
+}
+
+
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+a.PDCButton {
+    background: transparent url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat scroll top right;
+    background-position: right -90px;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+        
+
+}
+
+a.PDCButton span {
+    background:  #dae1e8 url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat;
+    background-position: left -90px;
+    display: block;
+    line-height: 14px;
+    padding: 4px 0 5px 18px;
+
+}
+a.PDCButton:hover {
+    background-position: right -270px;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+    text-decoration: none;
+}
+
+a.PDCButton:hover span {
+    background-position: left -270px;
+    padding: 4px 0 5px 18px; /* push text down 1px */
+} 
+
+a.PDCButton span b.SchedStart {
+background-image: url(../../../html/themes/teradata/images/PDC/Actions-dialog-ok-apply-icon.png);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 20px;
+}
+a.PDCButton span b.SchedStop  {
+background-image: url(../../../html/themes/teradata/images/PDC/Actions-dialog-cancel-icon.png);
+background-repeat: no-repeat;
+background-position: left;
+padding-left: 20px;
+}
+
+a.PDCButtonWhite {
+    background: transparent url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat scroll top right;
+    background-position: right -90px;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+        
+
+}
+
+a.PDCButtonWhite span {
+    background:  white url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat;
+    background-position: left -90px;
+    display: block;
+    line-height: 14px;
+    padding: 4px 0 5px 18px;
+
+}
+a.PDCButtonWhite:hover {
+    background-position: right -270px;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+    text-decoration: none;
+}
+
+a.PDCButtonWhite:hover span {
+    background-position: left -270px;
+    padding: 4px 0 5px 18px; /* push text down 1px */
+} 
+
+span.PDCButtonReal {
+    background: white url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat;
+    background-position: left -90px;
+    display: block;
+    height: 22px;
+    width: 80px;
+    padding-left: 10px;
+
+}
+
+span.PDCButtonReal input{
+    background: white url(../../../html/themes/teradata/images/TDportal/buttons/adminbuttons.gif) no-repeat scroll top right;
+    background-position: right -90px;
+    color: #444;
+    display: block;
+    border: 0px none;
+    text-decoration: none;
+    position: relative;
+    top: -5px;
+    height: 22px;
+    float: right;
+    padding-bottom: 2px;
+}
+
+span.PDCButtonReal:hover { 
+    background-position: left -270px;
+ }
+
+
+span.PDCButtonReal input:hover { 
+    background-position: right -270px;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+    text-decoration: none;
+ }
+
+
+
+.centerMe {text-align: center;}
+.rightMe {text-align: right; float: right;}  
+.divided {margin-top: 6px; margin-bottom: 6px;}
+
+.fontBig {
+font-size: 20px;
+font-weight: bold;
+}
+
+.hidden { display: none; }
+  
+.breaker_simple {
+clear: both;
+font-size: 0em;
+}
+.breaker_portlet {
+clear: both;
+font-size: 0em;
+height: 10px;
+}
+/*******************************************************************************
+ * 
+ ******************************************************************************/ 
+.page_background { background-color: silver; position: absolute; width: 100%;}
+.about_inner {
+  background-color: #fcfafc; 
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  }
+  
+  .about_inner DIV {padding: 20px;}
+/******************************************************************************/
+/* Liferay                                                                    */
+/******************************************************************************/
+/* Global */
+a {
+color: #C4C4C4;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+body {
+border: 0;
+margin: 0;
+padding: 0;
+font-family: Verdana, Arial;
+font-size: 62.5%; /* sets 1em equal to 10px */
+background-color: #b32400;
+}
+#layout-content-container DIV { zoom: 1; } /* Portlets */
+
+input, option, select {
+    font-family: Verdana, Arial;
+}
+body#portal-body {
+background-color: #FFFFFF;
+height: 100%;
+}
+body * { font-size: 1em; }
+.font-xx-small { font-size: 0.7em; }
+.font-x-small { font-size: 0.8em; }
+.font-small { font-size: 0.9em; }
+.font-large { font-size: 1.1em; }
+.font-x-large { font-size: 1.2em; }
+.font-xx-large { font-size: 1.3em; }
+form {
+margin: 0;
+padding: 0;
+}
+ul {
+list-style-type: none;
+margin: 5px 0 10px 20px;
+padding: 0;
+}
+img { border: 0; margin: 0; padding: 0 }
+input, button, select { font-size: 1.1em; }
+
+/******************************************************************************/
+/* Liferay Layout CSS                                                         */
+/******************************************************************************/
+#layout-outer-side-decoration {
+background-color: #FFFFFF;
+            /* height: 600px; */    
+}
+#layout-inner-side-decoration {
+background-color: #FFFFFF;
+           /* height: 600px; */
+   margin: 0 auto 0 auto;
+}
+#layout-box {
+padding: 3px 0 10px 0;
+margin: 0 auto 0 auto;
+text-align: left;
+}
+
+.tdpagetabregion {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetabregion-bg.gif);
+background-position: top left;
+background-repeat: repeat-x;
+background-color: #466b8b;
+}
+#layout-nav-container {
+float: left;
+}
+#portal-nav-container {
+float: left;
+}
+
+.layout-tab {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-left.gif);
+background-position: top left;
+background-repeat: no-repeat;
+background-color: #446A8B;
+float: left;
+font-weight: bold;
+margin-right: 1px;
+        
+          
+          margin-top: 3px;
+        
+        
+        
+position: relative;
+        
+          height: 18px;
+       
+}
+.layout-tab-right {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-right.gif);
+background-position: top right;
+background-repeat: no-repeat;
+}
+.layout-tab a {
+color: #d1dae2;
+text-decoration: none !important;
+}
+.layout-tab a:hover {
+color: #FFFFFF;
+}
+#layout-tab-add {
+float: left;
+background-image: none;
+background-color: transparent;
+padding-left: 5px;
+}
+#layout-tab-add, #layout-tab-add a {
+color: #d1dae2;
+font-weight: normal;
+}
+#layout-tab-add a:hover {
+text-decoration: underline !important;
+}
+#layout-tab-selected {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-left.gif);
+}
+#layout-tab-selected .layout-tab-right {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-right.gif);
+}
+#layout-tab-selected, #layout-tab-selected a {
+color: #FFFFFF;
+}
+.layout-tab-text {
+padding: 3px 30px 3px 8px;
+}
+.layout-tab-text * {
+white-space: nowrap;
+}
+
+a.layout-tab-close {
+display: block;
+/* visibility: hidden; */
+position: relative;
+top: 1px;
+right: 1px;
+width: 19px;
+height: 19px;
+font-size: 1px;
+line-height: 1px;
+text-decoration: none;
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-close.gif);
+background-repeat: no-repeat;
+}
+a.layout-tab-close:hover {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-close-over.gif);
+}
+
+
+.x-tab {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-left.gif);
+background-position: top left;
+background-repeat: no-repeat;
+background-color: #446A8B;
+float: left;
+font-weight: bold;
+margin-right: 1px;
+margin-top: 3px;
+position: relative;
+height: 18px;
+}
+.x-tab DIV {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-right.gif);
+background-position: top right;
+background-repeat: no-repeat;
+}
+.x-tab a {
+color: #d1dae2;
+text-decoration: none !important;
+}
+.x-tab a:hover {
+color: #FFFFFF;
+}
+
+
+.x-tab-selected {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-left.gif);
+}
+.x-tab-selected DIV {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagetab-selected-right.gif);
+background-repeat: no-repeat;
+background-position: right top;
+}
+
+.x-tab-selected, .x-tab-selected a {
+color: #FFFFFF; 
+}
+
+#layout-content-outer-decoration {
+        position:relative;
+z-index: 11; /* PORTLETS-5397 */
+}
+#layout-content-container {
+padding-left: 10px;
+padding-right: 10px;
+border-left: 1px solid #a3b5c5;
+border-right: 1px solid #a3b5c5;
+min-height: 420px;
+height:auto !important;
+clear: both;
+
+}
+
+.portlet-container {
+/*background-color: #FFFFFF;*/
+    position:relative;
+    /*width: 780px*/
+}
+.portlet-box, .portlet-box-info {
+background-color: #ffffff;
+border: 1px solid #cccccc;
+}
+ 
+.chromehover .portlet-box {
+    border: 1px solid #999999;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    
+}
+
+.portlet-minimum-height {
+height:auto !important;
+}
+
+.portlet-wrap-title
+{
+position: relative;
+    float: left;
+}
+
+/*
+    This is the title-bar input field for editing the portlet name
+*/
+
+.portlet-title
+{
+color: #3F3F3F;
+font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+margin-left: 5px;
+    float: left;
+}
+.portlet-chrome-header .portlet-title,
+.chromehover .portlet-title {
+color: #ffffff;
+margin-left: 10px;
+}
+.portlet-small-icon-bar {
+padding-left: 2px;
+position: absolute;
+top: 1px;
+right: 1px;
+}
+.portlet-spacer {
+font-size: 0;
+height: 5px;
+}
+
+/******************************************************************************/
+/* Display Tag Library                                                        */
+/******************************************************************************/
+TR.even { background-color: #A2B4C5; color: #000000; }
+TR.odd { background-color: #FFFFFF; color: #000000; }
+/* end css cached */
+/******************************************************************************/
+/* Teradata theme additions                                                   */
+/******************************************************************************/
+.tdheader {
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 7px;
+padding-top: 10px;
+text-align: center;
+}
+.tdlogo {
+background-image: url(../../../html/themes/teradata/images/TDportal/header/tdlogo.gif);
+background-repeat: no-repeat;
+display: block;
+width: 300px;
+height: 26px;
+float: left;
+padding-right: 20px;
+    padding-bottom: 6px;
+}
+.tdgreeting {
+font-size: 10px;
+color: #6C6C6C;
+padding-top: 9px;
+padding-left: 5px;
+text-align: left;
+float: right;
+}
+.tdlogout {
+color: #2E5273;
+padding-left: 15px;
+font-size: 10px;
+}
+ul.tdheaderlinks {
+float: right;
+text-align: right;
+margin: 0;
+padding: 0;
+padding-top: 9px;
+}
+ul.tdheaderlinks li {
+display: inline;
+margin-left: 10px;
+font-size: 11px;
+color: #2E5273;
+}
+ul.tdheaderlinks li a {
+background-repeat: no-repeat;
+padding-left: 10px;
+padding-bottom: 5px;
+color: #2E5273;
+}
+
+ul.tdheaderlinks li a:hover {
+color: #466b8b;
+}
+
+ul.tdheaderlinks li a.portal-help-link{
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/help.gif);
+background-position: center top;
+padding-right: 4px;
+padding-top: 4px;
+text-decoration: none;
+}
+.tdpageheader {
+clear: both;
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pageheader-left.gif);
+background-position: top left;
+background-repeat: no-repeat;
+background-color: #466b8b;
+overflow: hidden;
+}
+.tdpageheader_filter {
+clear: both;
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pageheader-left.gif);
+background-position: top left;
+background-repeat: no-repeat;
+background-color: #466b8b;
+overflow: hidden;
+}
+
+
+
+.tdpageheader .tdpageheaderright {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pageheader-right.gif);
+background-position: top right;
+background-repeat: no-repeat;
+padding: 0px 3px;
+color: #ffffff;
+overflow: hidden;
+}
+.tdpagetop {
+clear: both;
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-top-bg-middle.gif);
+background-position: top left;
+background-repeat: repeat-x;
+height: 35px;
+}
+.tdpagetop-left {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-top-bg-left.gif);
+background-position: top left;
+background-repeat: no-repeat;
+height: 35px;
+}
+.tdpagetop-right {
+background-image: url(../../../html/themes/teradata/images/TDportal/pageheader/pagecontent-top-bg-right.gif);
+background-position: top right;
+background-repeat: no-repeat;
+height: 35px;
+text-align: right;
+}
+.tdpagebottom {
+clear: both;
+background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-bottom-bg-middle.gif);
+background-position: bottom left;
+background-repeat: repeat-x;
+height: 40px;
+}
+.tdpagebottom-left {
+background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-bottom-bg-left.gif);
+background-position: bottom left;
+background-repeat: no-repeat;
+height: 40px;
+}
+.tdpagebottom-right {
+background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-bottom-bg-right.gif);
+background-position: bottom right;
+background-repeat: no-repeat;
+height: 40px;
+}
+/* admin framing */
+.tdpagebottom-left {
+background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-bottom-bg-left.gif);
+background-position: bottom left;
+background-repeat: no-repeat;
+height: 40px;
+}
+.tdpagebottom-right {
+background-image: url(../../../html/themes/teradata/images/TDportal/pagefooter/pagecontent-bottom-bg-right.gif);
+background-position: bottom right;
+background-repeat: no-repeat;
+height: 40px;
+}
+.tdfooter {
+    text-align: center;
+    font-size: 10px;
+    font-family: verdana, serif;
+    color: #6C6C6C;
+    clear: both;
+}
+
+/* portlet menu */
+.menubutton {
+float: left;
+}
+.menubutton a {
+display: block;
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menuarrow-main-down.gif);
+background-position: right top;
+background-repeat: no-repeat;
+margin-top: 7px;
+padding-top: 1px;
+padding-left: 8px;
+padding-right: 20px;
+padding-bottom: 9px;
+text-decoration: none !important;
+color: #ffffff;
+cursor: pointer;
+font-weight: bold;
+}
+
+/* tops and bottoms of menus */
+.portlet-menu-top,
+.portlet-menu-bottom {
+position: relative;
+height: 3px;
+}
+.portlet-menu-TL,
+.portlet-menu-BL,
+.portlet-menu-TR,
+.portlet-menu-BR {
+background-repeat: no-repeat;
+width: 3px;
+height: 3px;
+position: absolute;
+top: 0px;
+}
+.portlet-menu-TL,
+.portlet-menu-BL {
+left: 0px;
+}
+.portlet-menu-TR,
+.portlet-menu-BR {
+right: 0px;
+}
+.portlet-menu-TL { background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menu-TL.gif); }
+.portlet-menu-BL { background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menu-BL.gif); }
+.portlet-menu-TR { background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menu-TR.gif); }
+.portlet-menu-BR { background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menu-BR.gif); }
+.portlet-menu-TM,
+.portlet-menu-BM {
+margin: 0px 3px;
+height: 2px;
+font-size: 1px;
+line-height: 1px;
+background-color: #293f52;
+}
+.portlet-menu-TM {
+border-top: 1px solid #1a2733;
+}
+.portlet-menu-BM {
+border-bottom: 1px solid #1a2733;
+}
+.portlet-menu-TM-root {
+margin: 0px 3px;
+height: 2px;
+font-size: 1px;
+line-height: 1px;
+background-color: #293f52;
+margin-left: 0px;
+border-top: 1px solid #1a2733;
+border-left: 1px solid #1a2733;
+}
+.admin-menu-TM-root {
+margin: 0px 3px;
+height: 2px;
+font-size: 1px;
+line-height: 1px;
+background-color: #293f52;
+margin-right: 0px;
+border-top: 1px solid #1a2733;
+border-right: 1px solid #1a2733;
+}
+
+.portlet-boundary {
+float: left;
+}
+
+/* class for all menu divs */
+.portlet-category {
+width: 120px;
+/*margin-right: 10px;*/
+}
+.portlet-menu {
+/*background-image: url(../../../html/themes/teradata/images/TDportal/menu/menucontent-bg.gif);*/
+background-position: top left;
+background-repeat: repeat-x;
+
+/*opacity: 0.95;*/
+}
+.portlet-menu-content {
+background-color: #293f52;
+border-left: 1px solid #1a2733;
+border-right: 1px solid #1a2733;
+padding: 0;
+margin: 0;
+}
+.portlet-menu a {
+text-decoration: none !important;
+color: #ffffff;
+display: block;
+white-space: nowrap;
+}
+.portlet-menu a:hover {
+background-image: url(../../../html/themes/teradata/images/TDportal/menu2/menu-selected-bg.gif) !important;
+background-repeat: repeat-x;
+color: #1a2733 !important;
+}
+
+.portlet-menu a.portlet-item {
+display: block;
+text-decoration: none;
+color: #ffffff;
+}
+.portlet-menu a.portlet-item span {
+display: block;
+background-image: none !important;
+background-position: center left;
+background-repeat: no-repeat;
+padding: 3px;
+padding-left: 8px;
+padding-right: 14px;
+text-align: left;
+}
+
+/* portlet search */
+#portlet-search {
+margin-left: 1px;
+margin-top: 2px;
+padding-left: 8px;
+padding-right: 7px;
+padding-bottom: 6px;
+padding-top: 4px;
+float: left;
+}
+
+
+#portlet-search input {
+font-size: 0.9em;
+}
+#portlet-search input.text {
+color: #808080;
+}
+
+/* portlet chrome header */
+.portlet-header-bar, .portlet-header-bar-filter , .portlet-header-bar-info{
+
+position: relative;
+overflow: hidden;
+}
+.portlet-header-bar, .portlet-header-bar-filter {
+height: 20px;
+}
+.portlet-header-bar-info {
+height: 26px;
+}
+div.portlet-chrome-header {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 40px;
+z-index: 10;
+}
+div.portlet-chrome-header div.portlet-chrome-gradient {
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 40px;
+}
+div.portlet-chrome-top {
+width: auto;
+height: 39px;
+margin-left: 4px;
+margin-right: 4px;
+/*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../html/themes/teradata/images/TDportal/module/corners/top-bg.png', sizingMethod='scale');*/
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/top-bg.gif);
+background-position: top left;
+background-repeat: repeat-x;
+}
+div.portlet-chrome-TL {
+ 	position: absolute;
+width: 4px;
+height: 39px;
+left: 0;
+top: 0;
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/TL.gif);
+background-position: top left;
+background-repeat: repeat-x;
+}
+div.portlet-chrome-TR {
+position: absolute;
+width: 4px;
+height: 39px;
+right: 0;
+top: 0;
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/TR.gif);
+background-position: top left;
+background-repeat: repeat-x;
+}
+/* portlet chrome footer */
+.portlet-footer-bar {
+position: relative;
+height: 20px;
+overflow: hidden;
+}
+div.portlet-chrome-footer {
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 40px;
+z-index: 10;
+}
+div.portlet-chrome-footer div.portlet-chrome-gradient {
+position: absolute;
+left: 0;
+bottom: 0;
+width: 100%;
+height: 40px;
+}
+div.portlet-chrome-bottom {
+width: auto;
+height: 40px;
+margin-left: 4px;
+margin-right: 4px;
+/*filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../../html/themes/teradata/images/TDportal/module/corners/bottom-bg.png', sizingMethod='scale');*/
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/bottom-bg.gif);
+background-position: bottom left;
+background-repeat: repeat-x;
+}
+div.portlet-chrome-BL {
+position: absolute;
+width: 4px;
+height: 40px;
+left: 0;
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/BL.gif);
+background-position: bottom left;
+background-repeat: repeat-x;
+}
+div.portlet-chrome-BR {
+position: absolute;
+width: 4px;
+height: 40px;
+right: 0;
+bottom: 0px;
+background-image: url(../../../html/themes/teradata/images/TDportal/module/corners/BR.gif);
+background-position: bottom left;
+background-repeat: repeat-x;
+}
+
+span.PDCStatTableFilterValueWC input
+{
+background-color: #466b8b;
+color: #f2f2f2;
+width: auto;
+}
+
+table.PDCStatTableFilter td.PDCStatTableFilterValueWC {
+background-color: #466b8b;
+color: #f2f2f2;
+width: 10%;
+}

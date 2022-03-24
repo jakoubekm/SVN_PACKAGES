@@ -1,0 +1,7 @@
+ALTER TABLE SESS_JOB_DEPENDENCY_BCKP ADD (ENGINE_ID NUMBER);
+
+UPDATE  sess_job_dependency_bckp SET engine_id = 0 where engine_id is null;
+
+ALTER TABLE SESS_JOB_DEPENDENCY ADD (ENGINE_ID NUMBER);
+
+UPDATE  sess_job_dependency SET engine_id = 0 where engine_id is null;

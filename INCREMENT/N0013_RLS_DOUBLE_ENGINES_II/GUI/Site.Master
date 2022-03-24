@@ -1,0 +1,357 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PDC.SiteMaster" %>
+
+<%@ Register Src="UserControls/SectionLevelListing.ascx" TagName="SectionLevelListing" TagPrefix="uc1" %>
+<%@ Register Src="UserControls/PDCTopMenu.ascx" TagName="PDCTopMenu" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/PDCLeftMenu.ascx" TagName="PDCLeftMenu" TagPrefix="uc3" %>
+
+<%@ Register Src="UserControls/PDCMainFilter.ascx" TagName="PDCMainFilter" TagPrefix="uc5" %>
+<%@ Register src="UserControls/PDCStatScheduler.ascx" tagname="PDCStatScheduler" tagprefix="uc6" %>
+<%@ Register src="UserControls/PDCStatEngine.ascx" tagname="PDCStatEngine" tagprefix="uc7" %>
+
+<%@ Register src="UserControls/About.ascx" tagname="About" tagprefix="uc8" %>
+<%@ Register src="UserControls/PDCStatSystem.ascx" tagname="PDCStatSystem" tagprefix="uc9" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Teradata PDC - Home</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" EnableViewState="False">
+    </asp:ContentPlaceHolder>
+
+    <link rel="Shortcut Icon" href="./html/themes/teradata/images/liferay.ico" />
+    <link href="./html/themes/teradata/pdc_style.css" rel="stylesheet" type="text/css" />
+    <%-- change of tables headers if is set in CTRL_PARAMETERS--%>
+    <%
+        try
+        {
+            if (!String.IsNullOrEmpty(Session["GuiColor"].ToString()))
+            {
+                Response.Write("<style>");
+                Response.Write(".PDCTblHeader {background-color: " + Session["GuiColor"].ToString() + "}");
+                Response.Write(".PDCTblFooter {background-color: " + Session["GuiColor"].ToString() + "}");
+                Response.Write("table.PDCStatTable th {background-color: " + Session["GuiColor"].ToString() + "}");
+                Response.Write("table.PDCStatTableFilter thead {background-color: " + Session["GuiColor"].ToString() + "}");
+                Response.Write("</style>");
+            }
+        }
+        catch {}
+    %>
+    
+</head>
+<body id="portal-body">
+    <uc8:About ID="PDCAbout" runat="server" EnableViewState="false" Visible="false"/>
+    <div id="layout-outer-side-decoration" style="z-index: 0">
+        <div id="layout-inner-side-decoration">
+            <div id="layout-box">
+                <form id="Form1" runat="server">
+                <asp:ScriptManager ID="PDCAJAXScriptManager" runat="server" EnableViewState="False">
+                </asp:ScriptManager>
+
+
+                <div class="tdheader">
+                    <ul class="tdheaderlinks">
+                        <li><!--<a href="javascript:void(0)" class="portal-help-link">&nbsp;</a> -->
+                        <asp:LinkButton ID="lbAbout" runat="server" CommandName="About" 
+                                CommandArgument="true" OnCommand="BFilterButtonPressed" CssClass="portal-help-link" 
+                                EnableViewState="False">&nbsp;</asp:LinkButton>
+                        
+                        </li>
+                    </ul>
+                    <span class="tdlogo">&#160; </span>
+                    <div class="tdgreeting">                      
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate>
+                                [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                                ]
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome, <span class="bold">
+                                    <asp:LoginName ID="HeadLoginName" runat="server" EnableViewState="False" />
+                                </span>! [
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                                    LogoutPageUrl="~/" EnableViewState="False" />
+                                ]
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
+
+                    </div>
+                </div><!-- Top page header (END) -->
+              
+                <div class="tdpageheader" id="tdpageheader">
+                    <div class="tdpageheaderright">
+                        <div id="portlet-menu" class="menubutton">
+                            <asp:LinkButton ID="LBFilterToggle" runat="server" CommandName="Toggle" 
+                                CommandArgument="true" OnCommand="BFilterButtonPressed" CssClass="menubutton" 
+                                EnableViewState="False">Filtering</asp:LinkButton>
+                        </div>
+                        <div id="portlet-search">
+                        <!-- 
+                            <input type="text" class="text" name="portlet-search-terms" id="portlet-search-terms"
+                                value="Filter contents by keyword" size="25" />
+                         -->
+
+                            <asp:LinkButton ID="LBFilteringTurnOff" runat="server" EnableViewState="False" CommandName="Reset" CommandArgument="true" OnCommand="BFilterButtonPressed"><asp:Label ID="lMainFilterStatus" runat="server" Text="Label" EnableViewState="False" CssClass="filterOff"></asp:Label></asp:LinkButton>
+
+                        </div>
+
+                        <div class="rightMe portletMainfInfo">
+                            <uc6:PDCStatScheduler ID="PDCStatScheduler1" runat="server" 
+                                EnableViewState="True" />
+                            <uc7:PDCStatEngine ID="PDCStatEngine1" runat="server" EnableViewState="True" />
+                        </div>
+
+                        <div class="rightMe portletEngineSelection">
+                                <asp:SqlDataSource ID="SqlDataSource_PDCEngine" runat="server" 
+                                    ConnectionString="<%$ ConnectionStrings:PDCOracleConnection.connectionString %>"
+                                    ProviderName="<%$ ConnectionStrings:PDCOracleConnection.ProviderName %>" 
+                                    EnableViewState="False"
+                                    SelectCommand="PCKG_GUI.SP_GUI_VIEW_CTRL_PARAM_ENG"
+                                    SelectCommandType="StoredProcedure"
+                                    OnSelecting="SqlDataSource_Lookup_Selecting">
+                                    <SelectParameters>
+                                    <asp:ControlParameter Name="ENG_ID_IN" Direction="Input" DefaultValue="0" DbType="Int32" ControlID="dropdown_PDCEngine" PropertyName="SelectedValue" />
+                                    <asp:Parameter Name="USER_IN" Direction="Input" DefaultValue="DBG_USER" DbType="String" Size="255"/>
+                                    <asp:Parameter Name="DEBUG_IN" Direction="Input" DefaultValue="0" DbType="Int32"/>
+                                    <asp:Parameter Name="EXIT_CD_OUT" Direction="Output" DefaultValue="" DbType="Int32"/>
+                                    <asp:Parameter Name="ERRMSG_OUT" Direction="Output" DefaultValue="" DbType="String" Size="255"/>
+                                    <asp:Parameter Name="ERRCODE_OUT" Direction="Output" DefaultValue="" DbType="Int32"/>
+                                    <asp:Parameter Name="ERRLINE_OUT" Direction="Output" DefaultValue="" DbType="String" Size="255"/>           
+                                    <asp:SessionParameter Name="VALUES_OUT" Direction="Output" DefaultValue="" DbType="String" Size="255"/>
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <strong>Current Engine:</strong>&nbsp;<asp:DropDownList ID="dropdown_PDCEngine" runat="server" 
+                                    AutoPostBack="True" DataSourceID="SqlDataSource_PDCEngine" 
+                                    DataTextField="LKP_VAL_DESC" CssClass="PDCDropDownEngine" DataValueField="LKP_VAL_DESC" 
+                                    ondatabound="dropdown_PDCEngine_DataBound" 
+                                    onselectedindexchanged="dropdown_PDCEngine_SelectedIndexChanged">
+                                </asp:DropDownList>
+                         </div>
+                        <div class="rightMe portletMainfInfo">
+                            <uc9:PDCStatSystem ID="PDCStatSystem" runat="server" EnableViewState="True" />
+                        </div>
+   
+                    </div>
+                    
+                    <!-- Main Filter -->
+                    <uc5:PDCMainFilter ID="PDCMainFilter1" runat="server" />
+                    <!-- Main Filter (END) -->
+                </div><!-- Container of (Header + Filter) (END) -->
+               
+                <div class="tdpagetabregion">
+                    <div id="layout-nav-container">
+                        <!-- PDC Main Menu - User Control -->
+                        <uc2:PDCTopMenu ID="PDCTopMenu1" runat="server" EnableViewState="False" />                       
+                    </div> <!-- PDC Main Menu - User Control (END) -->
+                    <!-- end layout-nav-container -->
+                    <div class="tdpagetop">
+                        <div class="tdpagetop-left">
+                            <div class="tdpagetop-right">
+                                
+                            </div>
+                        </div>
+                    </div> <!-- Page Top - light blue gradient (END)-->
+                    
+                </div> <!-- Container of (Menu + Page Top) (END) -->
+                
+                <div id="layout-content-outer-decoration">
+                    <div id="layout-content-inner-decoration">
+                        <div id="layout-content-container">
+                            <asp:Panel ID="p_LeftMenuContainer" runat="server" EnableViewState="False" CssClass="RightMenuContainer" Visible="True" >
+                            
+                             <!-- LEFT MENU CONTAINER -->
+                                
+                                
+                                <span class="ModuleHeader">PDC Menu </span>
+                                <asp:LinkButton ID="LBLeftMenuHide" runat="server" CommandName="LeftMenuHide" 
+                                CommandArgument="true" OnCommand="BLBButtonPressed"  CssClass="rightMe"
+                                EnableViewState="False"><img src="./html/themes/teradata/images/PDC/left_menu_hide.gif" alt="hide" /></asp:LinkButton>
+                                <div class="RightMenu ModuleHeader">
+                                    <uc3:PDCLeftMenu ID="PDCLeftMenu1" runat="server" EnableViewState="False" />  
+                                </div>
+                                
+                                <!-- DBG Area (BEGIN) -->
+                                <div class="portlet-spacer">
+                                    &nbsp;</div>
+                                <asp:Panel ID="p_DEBUG" runat="server" EnableViewState="False" CssClass="DBG">
+                               
+                                    <hr /> 
+                                    <h2>
+                                        DBG</h2>
+                                    <asp:Label ID="lDBG" runat="server" Text="debugstring..." EnableViewState="False"></asp:Label>
+                                    <hr /> 
+                                 </asp:Panel>
+                                 <!-- DBG Area (END) -->
+
+                            </asp:Panel> <!-- LEFT MENU CONTAINER (END) -->
+
+                            <asp:Panel ID="p_LeftMenuContainerHidden" runat="server" EnableViewState="False" Visible="False" CssClass="RightMenuContainerHidden">
+                            <asp:LinkButton ID="LinkButton1" runat="server" CommandName="LeftMenuShow" 
+                                CommandArgument="true" OnCommand="BLBButtonPressed"  
+                                EnableViewState="False"><img src="./html/themes/teradata/images/PDC/left_menu_show.gif" alt="show" /></asp:LinkButton>
+                                <div class="portlet-spacer">
+                                    &nbsp;</div>
+                            </asp:Panel>
+
+                            <asp:Panel ID="p_UnauthorizedAccess" runat="server" EnableViewState="False" Visible="False" CssClass="CenterPageContainer T4 font-xx-large">
+                            Unauthorized Access.
+                            <br />
+                            The user [<span class="B3"><asp:LoginName ID="HeadLoginNameUnauth" runat="server" EnableViewState="False" /></span>] has insufficient rights to view this content.
+
+                            </asp:Panel>
+
+
+                            <asp:Panel ID="p_CenterPageContainer" runat="server" EnableViewState="False" CssClass="CenterPageContainer">
+                            
+                            <asp:Panel ID="pInfoPanel" runat="server" EnableViewState="False" CssClass="portlet-container chromehover"
+                                Visible="False">
+                                <div class="portlet-header-bar-info">                                            
+                                <div class="portlet-chrome-header">
+                                    <div class="portlet-chrome-gradient">    
+                                    <div class="portlet-chrome-TL">&#160;</div>    
+                                    <div class="portlet-chrome-top">&#160;</div>    
+                                    <div class="portlet-chrome-TR">
+                                     <div class="rightMe">
+                                        <asp:LinkButton ID="BFilterCloseImage" runat="server" CssClass="layout-tab-close"
+                                            ToolTip="Close">&#160;</asp:LinkButton>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="portlet-wrap-title PDCPortalInfo"><span class="portlet-title">PDC INFOPANEL</span>
+                                   
+                                    </div>                                            
+                                </div>                                            
+                                <!-- end portlet-chrome-header -->                                        
+                                </div>                                        
+                                <!-- end portlet-header-bar -->                                        
+                                <div class="tdpagetabregion"> 
+                                <!-- Portlet Header -->                                            
+                                <div id="Div1">
+                                    <!-- portlet Sub Menu -->                                            
+                                </div>
+                                <!-- portlet Sub Menu -->                                            
+                                <div class="breaker_simple">&nbsp;</div>                                            
+                                <!-- end tdpagetop -->                                        
+                                </div>
+                                <!-- Portlet Header (END) -->                         
+                                <div class="portlet-box portlet-box-maximized">                                            
+                                <div class="portlet-minimum-height">                                         
+                                    <!-- Portlet ( particular page ) ************************** -->                   
+                                    <div class="PortletBoxInnerInfo">		             
+                                    <p>                
+                                        <asp:Label ID="lInfo" runat="server" Text="Label" EnableViewState="False"></asp:Label>
+                                    </p>                     
+                                    <div class="breaker_simple">&nbsp;</div>        	
+                                    </div>     
+                                    <!-- Portlet ( particular page ) (END) ******************** -->                                             
+                                </div>                                        
+                                </div>                                        
+                                <!-- end portlet-box -->     
+                                    <div class="breaker_portlet">&nbsp;</div>                                          
+                                <!-- end portlet-footer-bar -->   
+                            </asp:Panel>
+                          
+                                    <div class="portlet-container chromehover ">
+                                        <div class="portlet-header-bar">
+                                            <div class="portlet-chrome-header">
+                                                <div class="portlet-chrome-gradient">
+                                                    <div class="portlet-chrome-TL">
+                                                        &#160;
+                                                    </div>
+                                                    <div class="portlet-chrome-top">
+                                                        &#160;
+                                                    </div>
+                                                    <div class="portlet-chrome-TR">
+                                                        &#160;
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-wrap-title">
+                                                    <!-- 
+                                                        <span class="portlet-title">
+                                                        <asp:Label ID="portletMainTitle" runat="server" Text="Label"></asp:Label>
+                                                        </span>
+                                                     -->
+                                                        <asp:SiteMapPath ID="SiteMapPath_PortletSubMenu" runat="server" CssClass="portlet-title" EnableViewState="False" SkipLinkText="Skip" ParentLevelsDisplayed="-1"></asp:SiteMapPath>
+                                                </div>
+                                            </div>
+                                            <!-- end portlet-chrome-header -->
+                                        </div>
+                                        <!-- end portlet-header-bar -->
+                                        <div class="PDCSectionLevelMenu"> <!-- Portlet Header -->
+
+
+                                                <uc1:sectionlevellisting id="SectionLevelListing1" runat="server" />
+
+                                            <div class="breaker_simple">
+                                                &nbsp;
+                                            </div>
+                                            <!-- end tdpagetop -->
+                                        </div><!-- Portlet Header (END) -->
+                                        
+                                        <div class="portlet-box portlet-box-maximized">
+                                            <div class="portlet-minimum-height">
+                                                
+                                                <!-- Portlet ( particular page ) ************************** -->                    
+                                                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                                                <!-- Portlet ( particular page ) (END) ******************** -->
+
+
+                                            </div>
+                                        </div>
+                                        <!-- end portlet-box -->
+                                        <div class="portlet-footer-bar">
+                                            <div class="portlet-chrome-footer">
+                                                <div class="portlet-chrome-gradient">
+                                                    <div class="portlet-chrome-BL">
+                                                        &#160;
+                                                    </div>
+                                                    <div class="portlet-chrome-bottom">
+                                                        &#160;
+                                                    </div>
+                                                    <div class="portlet-chrome-BR">
+                                                        &#160;
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end portlet-chrome-footer -->
+                                        </div>
+                                        <!-- end portlet-footer-bar -->
+                                    </div>
+                                    <!-- End portlet-container -->
+                                    <div class="portlet-spacer">
+                                    </div>                             
+                            
+                            </asp:Panel>
+                            <div class="breaker_simple">
+                                &nbsp;</div>
+                            <!-- INNER CONTENT WHOLE PAGE ****************************************************************** -->
+                        </div>
+                        <!-- layout-content-container -->
+                    </div>
+                    <!-- layout-content-inner-decoration -->
+                </div>
+                <!-- layout-content-outer-decoration -->
+                <div class="tdpagebottom">
+                    <div class="tdpagebottom-left">
+                        <div class="tdpagebottom-right">
+                        </div>
+                    </div>
+                </div> <!-- Page Bottom - line - (END) -->
+                
+                </form>
+            </div>
+            <!-- End layout-box -->
+        </div>
+    </div>
+    <!-- End layout-outer-side-decoration -->
+    <div class="tdfooter">
+        <asp:Label ID="lCopyright" runat="server" Text="Copyright &copy; Teradata Corporation"></asp:Label>
+    </div>
+    <!-- begin hidden module menu content -->
+    <!--  PDC END MMA  -->
+    <asp:SiteMapDataSource ID="SiteMapDataSource" runat="server" ShowStartingNode="False"
+        EnableViewState="False" />
+</body>
+</html>

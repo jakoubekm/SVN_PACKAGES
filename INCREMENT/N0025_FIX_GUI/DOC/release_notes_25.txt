@@ -1,0 +1,10 @@
+Změny:
+1. oprava FP 20 - Neudrží se nastavení Number of rows per page - opraveno na všech strankovacích tabulkách.
+2. oprava FP 13 - Potvrzování při mazání uživatele, rozšířena potrvzovací zpráva u akce v GUI.
+3. oprava refresh intervalu u refreshe vrchni části stránky - zamezení duplicitního spouštění, správné přebírání refresh intervalu z konfig. souboru a DB parametru.
+4. úprava vzhledu hlavního filtru.
+
+
+Instalace:
+1. Zaloha GUI
+2.  Přepsání změněných souborů v podsložce GUI.

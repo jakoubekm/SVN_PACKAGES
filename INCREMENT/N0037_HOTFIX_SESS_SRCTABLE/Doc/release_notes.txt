@@ -1,0 +1,8 @@
+VF_HOTFIX_SESS_SRCTABLE_INIT
+Ensure that maintenance on SESS_SRCTABLE is done  only during engine 0 initialization.
+
+Installation step:
+1. Open body of PCKG_INIT via Oracle SQL developer.
+2. !!Save current content of PCKG_INIT body!! (could be used if problem will appears e.g. step 4)
+3. Replace content of PCKG_INIT with new content from DB\packages\PCKG_INIT_body.plb
+4. Compile new content.(two toothed wheels button).
